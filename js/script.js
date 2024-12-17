@@ -22,7 +22,7 @@ class Car extends Vehicle {
 } 
 
 class Bike extends Vehicle {
-  constructor(brand,model,year,type) {
+  constructor(brand, model, year, type) {
     super(brand, model, year);
     this.type = type;
   }
