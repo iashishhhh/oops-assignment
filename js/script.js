@@ -1,45 +1,45 @@
 // Vehicle Class
 class Vehicle {
-  constructor(brand, model, year) {
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
+  constructor (brand, model, year) {
+    this.brand = brand
+    this.model = model
+    this.year = year
   }
-  getInfo() {
-    return `${this.brand} ${this.model} (${this.year})`;
+  getInfo () {
+    return `${this.brand} ${this.model} (${this.year})`
   }
 }
 
 // Car and Bike Classes - Inheriting Vehicle
 class Car extends Vehicle {
-  constructor(brand, model, year, fuelType) {
-    super(brand, model, year);
-    this.fuelType = fuelType;
+  constructor (brand, model, year, fuelType) {
+    super(brand, model, year)
+    this.fuelType = fuelType
   }
-  getDetails() {
-    return `${this.getInfo()} - Fuel Type: ${this.fuelType}`;
+  getDetails () {
+    return `${this.getInfo()} - Fuel Type: ${this.fuelType}`
   }
-} 
+}
 
 class Bike extends Vehicle {
-  constructor(brand, model, year, type) {
-    super(brand, model, year);
-    this.type = type;
+  constructor (brand, model, year, type) {
+    super(brand, model, year)
+    this.type = type
   }
-  getDetails() {
-    return `${this.getInfo()} - Type: ${this.type}`;
+  getDetails () {
+    return `${this.getInfo()} - Type: ${this.type}`
   }
 }
 
 // Driver Class
 class Driver {
-  constructor(name, gender, vehicle) {
-    this.name = name;
-    this.gender = gender;
-    this.vehicle = vehicle;
+  constructor (name, gender, vehicle) {
+    this.name = name
+    this.gender = gender
+    this.vehicle = vehicle
   }
-  getDriverInfo() {
-    return `${this.name} (${this.gender}) is driving a ${this.vehicle.getInfo()}`;
+  getDriverInfo () {
+    return `${this.name} (${this.gender}) is driving a ${this.vehicle.getInfo()}`
   }
 }
 
@@ -51,7 +51,7 @@ const vehicles = [
   new Bike('Suzuki', 'GSX-R1000', 2023, 'Sport'),
   new Car('Lamborghini', 'Urus', 2024, 'Electric'),
   new Car('BMW', 'M5', 2024, 'Petrol')
-];
+]
 
 const drivers = [
   new Driver('Ravi', 'Male', vehicles[0]),
@@ -60,22 +60,22 @@ const drivers = [
   new Driver('Tinna', 'Female', vehicles[3]),
   new Driver('Michak', 'Male', vehicles[4]),
   new Driver('Ruhi', 'Female', vehicles[5])
-];
+]
 
 // Display Vehicles List
-const vehicleListElement = document.getElementById('vehicleList');
-const vehicleDetails = document.getElementById('vehicleDetails');
-const driverDetails = document.getElementById('driverDetails');
+const vehicleListElement = document.getElementById('vehicleList')
+const vehicleDetails = document.getElementById('vehicleDetails')
+const driverDetails = document.getElementById('driverDetails')
 
 vehicles.forEach((vehicle, index) => {
-  const listItem = document.createElement('li');
-  listItem.textContent = vehicle.getInfo();
-  listItem.style.cursor = 'pointer';
+  const listItem = document.createElement('li')
+  listItem.textContent = vehicle.getInfo()
+  listItem.style.cursor = 'pointer'
 
   listItem.onclick = () => {
-    vehicleDetails.innerHTML = `<p><strong>Vehicle Details:</strong> ${vehicle.getDetails()}</p>`;
-    driverDetails.innerHTML = `<p><strong>Driver Info:</strong> ${drivers[index].getDriverInfo()}</p>`;
-  };
+    vehicleDetails.innerHTML = `<p><strong>Vehicle Details:</strong> ${vehicle.getDetails()}</p>`
+    driverDetails.innerHTML = `<p><strong>Driver Info:</strong> ${drivers[index].getDriverInfo()}</p>`
+  }
 
-  vehicleListElement.appendChild(listItem);
-});
+  vehicleListElement.appendChild(listItem)
+})
