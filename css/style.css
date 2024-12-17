@@ -1,0 +1,30 @@
+#vehicleDetails {
+    margin-top: 20px;
+}
+
+#driverDetails {
+    margin-top: 20px;
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    counter-reset: vehicle-counter;
+    padding-left: 20px;
+}
+
+li {
+    counter-increment: vehicle-counter;
+    margin: 10px 0;
+}
+
+li::before {
+    content: counter(vehicle-counter) ". ";
+    font-weight: bold;
+    color: #333;
+}
