@@ -30,7 +30,7 @@ class Bike extends Vehicle {
     this.type = type
   }
 
-  getBikeInfo () {
+  getBikeInfo () {  
     return `${this.getInfo()} - Type: ${this.type}`
   }
 }

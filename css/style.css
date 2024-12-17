@@ -14,6 +14,7 @@ h1 {
 
 ul {
     list-style: none;
+    text-align: center;
     counter-reset: vehicle-counter;
     padding-left: 20px;
 }
@@ -24,7 +25,31 @@ li {
 }
 
 li::before {
-    content: counter(vehicle-counter) ". ";
+    content: counter(vehicle-counter) ":- ";
     font-weight: bold;
     color: #333;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the UL */
+#vehicleList {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    list-style-position: inside;
+    font-size: 18px;
+}
+
+/* Style the list items */
+#vehicleList li {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
 }
