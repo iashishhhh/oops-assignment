@@ -10,7 +10,7 @@ class Vehicle {
   }
 }
 
-// -- Car and Bike Classes --//
+// Car and Bike Classes - Inheriting Vehicle
 class Car extends Vehicle {
   constructor (brand, model, year, fuelType) {
     super(brand, model, year)
@@ -39,7 +39,7 @@ class Driver {
     this.vehicle = vehicle
   }
   getDriverInfo () {
-    return `${this.name} (${this.gender})`
+    return `${this.name} (${this.gender}) is driving  ${this.vehicle.getInfo()}`
   }
 }
 
@@ -51,20 +51,17 @@ const vehicles = [
   new Bike('Suzuki', 'GSX-R1000', 2023, 'Sport'),
   new Car('Lamborghini', 'Urus', 2024, 'Electric'),
   new Car('BMW', 'M5', 2024, 'Petrol'),
-  new Car('Jeep Compass', 'SUV', 2024, 'Diesel'),
-  new Car('Hummer H3', 'SUV', 2010, 'Petrol')
-
+  new Car('Jeep Compass', 'SUV', 2024, 'Diesel')
 ]
 
 const drivers = [
-  new Driver('Ravi', 'Male'),
-  new Driver('Ishita', 'Female'),
-  new Driver('RishiDev', 'Male'),
-  new Driver('Tinna', 'Female'),
-  new Driver('Michak', 'Male'),
-  new Driver('Ruhi', 'Female'),
-  new Driver('Aadi', 'Male'),
-  new Driver('Akhilesh', 'Male')  
+  new Driver('Ravi', 'Male', vehicles[0]),
+  new Driver('Ishita', 'Female', vehicles[1]),
+  new Driver('RishiDev', 'Male', vehicles[2]),
+  new Driver('Tinna', 'Female', vehicles[3]),
+  new Driver('Michak', 'Male', vehicles[4]),
+  new Driver('Ruhi', 'Female', vehicles[5]),
+  new Driver('Aadi', 'Male', vehicles[6])
 ]
 
 // Display Vehicles List
