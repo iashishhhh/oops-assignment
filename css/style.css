@@ -37,7 +37,6 @@ body {
     padding: 0;
 }
 
-/* Style the UL */
 #vehicleList {
     display: inline-block;
     text-align: left;
@@ -47,9 +46,11 @@ body {
     font-size: 18px;
 }
 
-/* Style the list items */
 #vehicleList li {
     margin: 5px 0;
     padding: 5px;
     border-radius: 5px;
+}
+span{
+    color: red; 
 }

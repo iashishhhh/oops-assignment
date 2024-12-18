@@ -44,7 +44,7 @@ class Driver {
 }
 
 // Vehicles and Drivers List
-const vehicles = [
+const vehicles = [ 
   new Car('Toyota', 'Corolla', 2022, 'Petrol'),
   new Bike('Yamaha', 'FZ', 2021, 'Sport'),
   new Car('Honda', 'Civic', 2020, 'Diesel'),
@@ -74,7 +74,7 @@ vehicles.forEach((vehicle, index) => {
 
   listItem.onclick = () => {
     vehicleDetails.innerHTML = `<p><strong>Vehicle Details:</strong> ${vehicle.getDetails()}</p>`
-    driverDetails.innerHTML = `<p><strong>Driver Info:</strong> ${drivers[index].getDriverInfo()}</p>`
+    driverDetails.innerHTML = `<span><strong>Driver Info:</strong> ${drivers[index].getDriverInfo()}</span>`
   }
 
   vehicleListElement.appendChild(listItem)
