@@ -44,13 +44,14 @@ class Driver {
 }
 
 // Vehicles and Drivers List
-const vehicles = [ 
+const vehicles = [
   new Car('Toyota', 'Corolla', 2022, 'Petrol'),
   new Bike('Yamaha', 'FZ', 2021, 'Sport'),
   new Car('Honda', 'Civic', 2020, 'Diesel'),
   new Bike('Suzuki', 'GSX-R1000', 2023, 'Sport'),
   new Car('Lamborghini', 'Urus', 2024, 'Electric'),
-  new Car('BMW', 'M5', 2024, 'Petrol')
+  new Car('BMW', 'M5', 2024, 'Petrol'),
+  new Car('Jeep Compass', 'SUV', 2024, 'Diesel')
 ]
 
 const drivers = [
@@ -59,7 +60,8 @@ const drivers = [
   new Driver('RishiDev', 'Male', vehicles[2]),
   new Driver('Tinna', 'Female', vehicles[3]),
   new Driver('Michak', 'Male', vehicles[4]),
-  new Driver('Ruhi', 'Female', vehicles[5])
+  new Driver('Ruhi', 'Female', vehicles[5]),
+  new Driver('Aadi', 'Male', vehicles[6]),
 ]
 
 // Display Vehicles List
