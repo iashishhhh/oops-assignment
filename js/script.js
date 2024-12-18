@@ -49,7 +49,7 @@ const vehicles = [
   new Bike('Yamaha', 'FZ', 2021, 'Sport'),
   new Car('Honda', 'Civic', 2020, 'Diesel'),
   new Bike('Suzuki', 'GSX-R1000', 2023, 'Sport'),
-  new Car('Lamborghini', 'Urus', 2024, 'Electric'),
+  new Car('Lamborghini', 'Urus', 2024, 'Electric'),   
   new Car('BMW', 'M5', 2024, 'Petrol'),
   new Car('Jeep Compass', 'SUV', 2024, 'Diesel')
 ]
