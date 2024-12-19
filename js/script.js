@@ -39,7 +39,7 @@ class Driver {
     this.vehicle = vehicle
   }
   getDriverInfo () {
-    return `${this.name} (${this.gender}) is driving  ${this.vehicle.getInfo()}`
+    return `${this.name} (${this.gender}) is driving a ${this.vehicle.getInfo()}`
   }
 }
 
@@ -49,7 +49,7 @@ const vehicles = [
   new Bike('Yamaha', 'FZ', 2021, 'Sport'),
   new Car('Honda', 'Civic', 2020, 'Diesel'),
   new Bike('Suzuki', 'GSX-R1000', 2023, 'Sport'),
-  new Car('Lamborghini', 'Urus', 2024, 'Electric'),   
+  new Car('Lamborghini', 'Urus', 2024, 'Electric'),
   new Car('BMW', 'M5', 2024, 'Petrol'),
   new Car('Jeep Compass', 'SUV', 2024, 'Diesel')
 ]
@@ -59,25 +59,25 @@ const drivers = [
   new Driver('Ishita', 'Female', vehicles[1]),
   new Driver('RishiDev', 'Male', vehicles[2]),
   new Driver('Tinna', 'Female', vehicles[3]),
-  new Driver('Michak', 'Male', vehicles[4]),
+  new Driver('mac', 'Male', vehicles[4]),
   new Driver('Ruhi', 'Female', vehicles[5]),
   new Driver('Aadi', 'Male', vehicles[6])
 ]
-
 // Display Vehicles List
 const vehicleListElement = document.getElementById('vehicleList')
 const vehicleDetails = document.getElementById('vehicleDetails')
 const driverDetails = document.getElementById('driverDetails')
 
-vehicles.forEach((vehicle, index) => {
+drivers.forEach((driver) => {
   const listItem = document.createElement('li')
-  listItem.textContent = vehicle.getInfo()
+
+  listItem.textContent = `${driver.name} (${driver.gender})`
   listItem.style.cursor = 'pointer'
 
   listItem.onclick = () => {
-    vehicleDetails.innerHTML = `<p><strong>Vehicle Details:</strong> ${vehicle.getDetails()}</p>`
-    driverDetails.innerHTML = `<span><strong>Driver Info:</strong> ${drivers[index].getDriverInfo()}</span>`
+    vehicleDetails.innerHTML = `<p><strong>Vehicle Details:</strong> ${driver.vehicle.getDetails()}</p>`
+    driverDetails.innerHTML = `<p><strong>Driver Info:</strong> ${driver.getDriverInfo()}</p>`
   }
 
   vehicleListElement.appendChild(listItem)
-})
+})  
