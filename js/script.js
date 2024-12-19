@@ -65,9 +65,11 @@ const drivers = [
 ]
 // Display Vehicles List
 const vehicleListElement = document.getElementById('vehicleList')
+console.log(vehicleList)
 const vehicleDetails = document.getElementById('vehicleDetails')
+console.log(vehicleDetails)
 const driverDetails = document.getElementById('driverDetails')
-
+console.log(driverDetails)
 drivers.forEach((driver) => {
   const listItem = document.createElement('li')
 
@@ -80,4 +82,4 @@ drivers.forEach((driver) => {
   }
 
   vehicleListElement.appendChild(listItem)
-})  
+})
